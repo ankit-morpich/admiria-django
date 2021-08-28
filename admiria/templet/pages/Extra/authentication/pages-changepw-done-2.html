@@ -1,0 +1,78 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Lock Screen 2 | Admiria - Admin & Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+        <meta content="Themesbrand" name="author">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
+    
+        {% include "partials/css.html"%}
+    
+    </head>
+
+    <body data-sidebar="dark">
+
+
+        <!-- Loader -->
+            <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+        <!-- Begin page -->
+        <div class="accountbg" style="background: url('/static/images/bg-2.jpg');background-size: cover;background-position: center;"></div>
+
+        <div class="wrapper-page account-page-full">
+
+            <div class="card shadow-none">
+                <div class="card-block">
+
+                    <div class="account-box">
+
+                        <div class="card-box shadow-none p-4">
+                            <div class="p-2">
+                                <div class="text-center mt-4 mb-5">
+                                    <a href="{% url 'dashboard'%}"><img src="{% static 'images/logo.png'%}" height="30" alt="logo"></a>
+                                </div>
+
+                                
+
+                                 <div class="alert alert-success text-center mt-4 " role="alert">                                  
+                                    <p>Your password has been set. You may go ahead and log in now.</p>
+                                </div>
+
+
+                                <!-- <p class="text-muted text-center mt-4 mb-3">Successfully your password is changed  </p> -->
+                                {% comment %} <p class="text-muted mb-4 p-4">Please  {% endcomment %}
+
+
+                                {% comment %} <a href="{% url 'login' %}" class="btn btn-primary">Login</a></p> {% endcomment %}
+
+                                <!-- <div class="col-6 text-md-end">
+                                            <a href="{% url 'pages-login' %}" class="btn btn-primary">Register</a>
+                                        </div> -->
+
+
+                            <div class="mt-5 pt-4 text-center position-relative">
+                                <p>Not you ? return <a href="{% url 'pages-login-2'%}" class="fw-medium text-primary"> Sign In </a> </p>
+                                <p><script>document.write(new Date().getFullYear())</script> © Admiria. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+                             
+        <!-- JAVASCRIPT -->
+        {% include "partials/javascript.html"%}
+
+    </body>
+</html>

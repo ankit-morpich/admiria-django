@@ -1,0 +1,38 @@
+{% extends  "partials/base.html"%}
+{% load static %}
+
+{%block title%}
+Starter | Admiria - Admin & Dashboard Template
+{%endblock%}
+
+{%block css%}
+{% include "partials/css.html"%}
+{%endblock%}
+
+{%block content%}
+        <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                {% include "partials/footer.html" %}
+
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+{%endblock%}
+{% block rsidebar%}
+{% include "partials/r_sidebar.html"%}
+{%endblock%}
+{% block footer %}
+{% include "partials/footer.html" %}
+{%endblock%}
+{%block javascript%}
+{% include "partials/javascript.html" %}
+{%endblock%}

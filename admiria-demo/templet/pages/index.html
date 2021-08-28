@@ -1,0 +1,21 @@
+{% extends  "partials/base.html"%}
+{% load static %}
+
+
+
+{%block css%}
+{% include 'partials/css.html' %}
+{%endblock%}
+
+{%block content%}
+{% include "partials/content.html"%}
+{%endblock%}
+{% block rsidebar%}
+{% include "partials/r_sidebar.html"%}
+{%endblock%}
+{% block footer %}
+{% include "partials/footer.html" %}
+{%endblock%}
+{%block javascript%}
+{% include "partials/javascript.html" %}
+{%endblock%}

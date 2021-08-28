@@ -1,0 +1,166 @@
+{% extends  "partials/base.html"%}
+{% load static %}
+
+{% block css %}
+<link href="{% static 'libs/alertify.js/css/alertify.css'%}" rel="stylesheet" type="text/css">
+
+<!-- Bootstrap Css -->
+<link href="{% static 'css/bootstrap.min.css'%}" id="bootstrap-style" rel="stylesheet" type="text/css">
+<!-- Icons Css -->
+<link href="{% static 'css/icons.min.css'%}" rel="stylesheet" type="text/css">
+<!-- App Css-->
+<link href="{% static 'css/app.min.css'%}" id="app-style" rel="stylesheet" type="text/css">
+{%endblock%}
+{%block content%}
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <h4 class="card-title">Examples</h4>
+                            <p class="card-title-desc">Alertify.js is a small library which
+                                provides light-weight, high performance browser dialogs.</p>
+
+                            <div class="row text-center">
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Alert Dialog</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-alert">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Confirm Dialog</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-confirm">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Prompt Dialog</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-prompt">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Custom Labels</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-labels">Click me</button>
+                                </div>
+
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Ajax - Multiple Dialog</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-ajax">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Standard Log</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-notification">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Standard Log With HTML</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-notification-html">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Standard Log with callback</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-notification-callback">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Success Log</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-success">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Success Log with callback</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-success-callback">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Error Log</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-error">Click me</button>
+                                </div>
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Error Log with callback</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-error-callback">Click me</button>
+                                </div>
+
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Closing Log On Click</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-click-to-close">Click me</button>
+                                </div>
+
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Disable Log On Click</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-disable-click-to-close">Click me</button>
+                                </div>
+
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Hide in 10 seconds</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-delay">Click me</button>
+                                </div>
+
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Persistent Log</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-forever">Click me</button>
+                                </div>
+
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Maximum Number of Log Messages</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-max-log-items">Click me</button>
+                                </div>
+
+                                <div class="col-xl-3 col-md-4 mb-4">
+                                    <p class="text-muted">Resetting Default Values</p>
+                                    <button type="button" class="btn btn-primary waves-effect waves-light"
+                                        id="alertify-reset">Click me</button>
+                                </div>
+
+                            </div> <!-- end row -->
+
+                        </div>
+                    </div>
+                </div> <!-- end col -->
+            </div> <!-- end row -->
+
+
+
+        </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+
+
+</div>
+<!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+{%endblock%}
+
+{% block rsidebar%}
+{% include "partials/r_sidebar.html"%}
+{%endblock%}
+
+{% block footer %}
+{% include "partials/footer.html" %}
+{%endblock%}
+{%block javascript%}
+<!-- JAVASCRIPT -->
+<script src="{% static 'libs/jquery/jquery.min.js'%}"></script>
+<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'libs/metismenu/metisMenu.min.js'%}"></script>
+<script src="{% static 'libs/simplebar/simplebar.min.js'%}"></script>
+<script src="{% static 'libs/node-waves/waves.min.js'%}"></script>
+
+<script src="{% static 'libs/alertify.js/js/alertify.js'%}"></script>
+
+<script src="{% static 'js/pages/alertify-init.js'%}"></script>
+
+<script src="{% static 'js/app.js'%}"></script>
+
+{%endblock%}

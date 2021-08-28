@@ -1,0 +1,121 @@
+{% extends  "partials/base.html"%}
+{% load static %}
+
+{%block title%}
+Vector Map | Admiria - Admin & Dashboard Template
+{%endblock%}
+
+{%block css%}
+        <!-- plugin css -->
+        <link href="{% static 'libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css'%}" rel="stylesheet"
+            type="text/css">
+    
+        <!-- Bootstrap Css -->
+        <link href="{% static 'css/bootstrap.min.css'%}" id="bootstrap-style" rel="stylesheet" type="text/css">
+        <!-- Icons Css -->
+        <link href="{% static 'css/icons.min.css'%}" rel="stylesheet" type="text/css">
+        <!-- App Css-->
+        <link href="{% static 'css/app.min.css'%}" id="app-style" rel="stylesheet" type="text/css">
+{%endblock%}
+{% block content %}
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">World Map</h4>
+                                        <p class="card-title-desc">Example of vector map.</p>
+
+                                        <div id="world-map-markers" style="height: 400px"></div>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">USA Map</h4>
+                                        <p class="card-title-desc">Example of vector map.</p>
+
+                                        <div id="usa-vectormap" style="height: 400px"></div>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">UK Map</h4>
+                                        <p class="card-title-desc">Example of vector map.</p>
+
+                                        <div id="uk-vectormap" style="height: 400px"></div>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h4 class="card-title">Chicago Map</h4>
+                                        <p class="card-title-desc">Example of vector map.</p>
+
+                                        <div id="chicago-vectormap" style="height: 400px"></div>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                        
+
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+        {%endblock%}
+
+
+        {% block rsidebar%}
+        {% include 'partials/r_sidebar.html'%}
+        {%endblock%}
+        {% block footer %}
+        {% include "partials/footer.html" %}
+        {%endblock%}
+        {%block javascript%}
+                                    
+                             
+        <!-- JAVASCRIPT -->
+        <script src="{% static 'libs/jquery/jquery.min.js'%}"></script>
+        <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+        <script src="{% static 'libs/metismenu/metisMenu.min.js'%}"></script>
+        <script src="{% static 'libs/simplebar/simplebar.min.js'%}"></script>
+        <script src="{% static 'libs/node-waves/waves.min.js'%}"></script>
+
+         <!-- Plugins js-->
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js'%}"></script>
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js'%}"></script>
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js'%}"></script>
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js'%}"></script>
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-au-mill-en.js'%}"></script>
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-il-chicago-mill-en.js'%}"></script>
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-uk-mill-en.js'%}"></script>
+        <script src="{% static 'libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-ca-lcc-en.js'%}"></script>
+
+        <!-- Init js-->
+        <script src="{% static 'js/pages/vector-maps.init.js'%}"></script>
+
+        <script src="{% static 'js/app.js'%}"></script>
+
+{%endblock%}

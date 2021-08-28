@@ -1,0 +1,71 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+    <head>
+    
+        <meta charset="utf-8">
+        <title>Reset Screen | Admiria - Admin & Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+        <meta content="Themesbrand" name="author">
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}">
+    
+        {% include "partials/css.html"%}
+    
+    </head>
+
+    <body>
+
+        <!-- Loader -->
+            <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+        
+         <!-- Begin page -->
+         <div class="accountbg" style="background: url('/static/images/bg.jpg');background-size: cover;background-position: center;"></div>
+
+        <div class="account-pages mt-5 pt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center mt-4">
+                                    <div class="mb-3">
+                                        <a href="{% url 'dashboard' %}"><img src="{% static 'images/logo.png'%}" height="30" alt="logo"></a>
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h3 class="mt-2 text-center">Reset Your Password</h3>
+                                    <p class="text-muted text-center mt-4 mb-3">We've emailed you instruction for setting your password  </p>
+                                    <p class="text-muted text-center mb-4">If you don't recived an email,please make sure you've entered the address you registered with.</p>
+
+                                    <div class="row pt-4">
+                                        <div class="col-6">
+                                            <a href="{% url 'pages-register' %}" class="btn btn-primary">Register</a>
+                                        </div>
+                                        <div class="col-6 text-md-end">
+                                            <a href="{% url 'pages-login' %}" class="btn btn-primary">Login</a>
+                                        </div>
+                                    </div>
+             
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center position-relative">
+                            <!-- <p class="text-white">Not you ? return <a href="{% url 'pages-login'%}" class="font-weight-bold text-primary"> Sign In</a> </p> -->
+                            <p class="text-white"><script>document.write(new Date().getFullYear())</script> © Admiria. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+                             
+        <!-- JAVASCRIPT -->
+        {% include "partials/javascript.html"%}
+    </body>
+</html>

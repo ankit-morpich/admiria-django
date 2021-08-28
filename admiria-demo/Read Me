@@ -1,0 +1,288 @@
+Admiria Templet Installation in D'jango Python
+
+installation Python
+ ->https://www.python.org/downloads/
+
+can you used Windows 10 ?
+-python download from windows store
+
+Click on the Install Now
+Installation in Process
+Select the Python's version to download.
+	
+Open terminal
+->python --version
+ 
+after check pip version  
+->py -m pip --version
+upgread pip 
+->py -m pip install --upgrade pip
+
+Installing virtualenv	
+#linux & mac os
+->python3 -m pip install --user virtualenv
+# Windows
+->py -m pip install --user virtualenv
+
+
+Create Virtual Environment
+# linux & mac os
+->python3 -m venv environment_name
+# Windows
+->python -m venv environment_name
+
+Activate Environment
+# linux & mac os
+->source environment_name/bin/activate
+# Windows
+->environment_name\Scripts\activate
+ 
+you can use pip3 to install Django. 
+Step - 4 Install D'jango
+# linux & mac os
+->pip3 install django
+# Windows
+->pip install django
+ 
+first please check D'jango proper Install or not
+# Linux/macOS
+python3 -m django --version
+# Windows
+python  -m django --version
+
+open terminal 
+goto project directory 
+using cd command
+
+After Install some libraries
+->pip install django-embed-video
+->pip install django-session-timeout
+->pip install django-password-validators
+->pip install django-js-routes
+
+after create superuser 
+->python manage.py createsuperuser
+	enter username = your_username
+	enter your Email Address
+	enter your password
+	enter your password again 
+-> python manage.py migrate
+
+Setup smtp configure
+goto your project directory and open settings.py
+and add your email address
+# SMTP Configure
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = enter_your_email_address'
+EMAIL_HOST_PASSWORD = 'enter_your_email_password'
+DEFAULT_FROM_EMAIL = 'enter_your_email_address'
+SERVER_EMAIL = 'enter_your_email_address'
+
+LOGIN_REDIRECT_URL = '/'
+
+
+after run your project 
+-> python manage.py runserver
+
+
+Note : You can permenent setup of the layout so follow some steps.
+
+**********************************************************************************************************************************************************************************************************************************
+**************************************************************************************** Vertical View ********************************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+******************************************************************************* Vertical lightbar Sidebar View ************************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+go line number 18  and write this code  in body teg --->  data-topbar="dark"
+
+and  Add orizontal header in header block line number 30 --->  {% include 'partials/header.html' %}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+********************************************************************************** Vertical Compact Sidebar View **********************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+go line number 18  and write this code  in body teg ---> data-sidebar="dark" data-sidebar-size="small"
+
+and  Add orizontal header in header block line number 30 --->  {% include 'partials/header.html' %}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+********************************************************************************** Vertical Icon Layout View **********************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+go line number 18  and write this code  in body teg ---> data-sidebar="dark" data-keep-enlarged="true" class="vertical-collpsed"
+
+and  Add orizontal header in header block line number 30 --->  {% include 'partials/hori-header.html' %}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+********************************************************************************** Vertical Boxed Layout View **********************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+go line number 18  and write this code  in body teg ---> data-sidebar="dark" data-keep-enlarged="true" class="vertical-collpsed" data-layout-size="boxed"
+
+and  Add orizontal header in header block line number 30 --->  {% include 'partials/header.html' %}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+********************************************************************************** Vertical Colored Layout View **********************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+go line number 18  and write this code  in body teg ---> data-sidebar="colored" // for colored sidebar
+
+and  Add orizontal header in header block --->  {% include 'partials/header.html' %}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+**********************************************************************************************************************************************************************************************************************************
+***************************************************************************************** Horizontal View *****************************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+
+go line number 18  and write this code  in body teg --->  data-topbar="dark" data-layout="horizontal" 
+
+and this content add after this line <div class="container-fluid"> -->  
+<!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 font-size-18 text-uppercase">{{title}}</h4>
+
+                                <div class="page-title-end">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item">
+                                            <a href="javascript: void(0);">{{path}}</a>
+                                        </li>
+                                        <li class="breadcrumb-item active">{{title}}</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- End page title -->
+
+
+
+
+
+and  Add orizontal header in header block line number 30 --->  {% include 'partials/hori-header.html' %}
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+********************************************************************************** Horizontal Light Topbar View **********************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+go line number 18  and write this code  in body teg ---> data-layout="horizontal" data-topbar="light"
+
+and  Add orizontal header in header block line number 30 --->  {% include 'partials/hori-header.html' %}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+********************************************************************************** Horizontal Boxed Layout View **********************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Templets Directory
+and open layout Directory after open Base.html file
+
+go line number 18  and write this code  in body teg ---> data-topbar="dark" data-layout="horizontal" data-layout-size="boxed"
+
+and  Add orizontal header in header block line number 30 --->  {% include 'partials/hori-header.html' %}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+**************************************************************************************** light Mode ***********************************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Static Directory
+and open js Directory after open app.js file
+
+go line number 161  and replace this code  in  --->  alreadyVisited = "light-mode-switch";
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+**************************************************************************************** Dark Mode ************************************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Static Directory
+and open js Directory after open app.js file
+
+go line number 161  and replace this code  in  --->  alreadyVisited = "dark-mode-switch";
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+**********************************************************************************************************************************************************************************************************************************
+**************************************************************************************** RTL Mode ************************************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+Go to Static Directory
+and open js Directory after open app.js file
+
+go line number 161  and replace this code  in  --->  alreadyVisited = "rtl-mode-switch";
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********************************************************************************************************************************************************************************************************************************
+****************************************************************************************************************************************************************************************************************
+**********************************************************************************************************************************************************************************************************************************
+
+Step for using templets 2 for recover password and change password 
+if You Can Use Password Reset 2 ,Changepassword Reset  2 and Recover Password  2
+go now Authentication app 
+open views.url 
+using this code and another similer code remove it
+ 	
+    # View screen 2
+    path('pages-login-2', views.pages_login_2, name="pages-login-2"),
+    path('pages-register-2', views.pages_register_2, name="pages-register-2"),
+    path('logout', views.pages_logout_2, name="pages-logout-2"),
+    path('pages-recoverpw-2', views.pages_recoverpw_2, name="pages-recoverpw-2"),
+    path('password_change/',auth_views.PasswordChangeView.as_view(template_name='pages/Extra/authentication/pages-changepw-form-2.html'),name='password_change'),
+    path('password_change/done/',auth_views.PasswordChangeDoneView.as_view(template_name='pages/Extra/authentication/pages-changepw-done-2.html'),name='password_change_done'),
+    path('password_reset/done/',auth_views.PasswordResetDoneView.as_view(template_name='pages/Extra/authentication/pages-resetpw-2.html') ,name='password_reset_done'),
+    path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name='pages/Extra/authentication/pages-changepw-2.html') ,name='password_reset_confirm'),
+    path('reset/done/',auth_views.PasswordResetCompleteView.as_view(template_name='pages/Extra/authentication/pages-resetpwcomplate-2.html') ,name='password_reset_complete'),
+    path('pages-lock-screen-2', views.pages_lock_screen, name="pages-lock-screen-2"),
+    
+
+
+
+
+
+
