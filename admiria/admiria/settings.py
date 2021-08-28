@@ -40,13 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_password_validators',
     'authentication',
     'mail',
     'ecommerce',
     'components',
     'contact',
-    'js_routes',
 ]
 JS_ROUTES_INCLUSION_LIST = [
     'pages-blank',
@@ -57,7 +55,6 @@ SESSION_COOKIE_AGE = 60 # for 60 seconds timestamp
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django_session_timeout.middleware.SessionTimeoutMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
